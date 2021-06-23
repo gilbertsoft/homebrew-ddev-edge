@@ -1,17 +1,17 @@
 class Ddev < Formula
   desc "Local development environment management system"
   homepage "https://ddev.readthedocs.io/en/stable/"
-  url "https://github.com/drud/ddev/archive/v1.17.6-rc1.tar.gz"
-  sha256 "1e6ca74362f4ddba622db521dc46424958f77b8f90d2cc835e42feb2eeef3c36"
+  url "https://github.com/drud/ddev/archive/v1.17.6.tar.gz"
+  sha256 "096ba714128ec80309e911a4cb7cc4db0d8f19bc5b5ec2460bddbd3e350f2396"
 
   depends_on "mkcert" => :run
   depends_on "nss" => :run
 
   bottle do
-    root_url "https://github.com/drud/ddev/releases/download/v1.17.6-rc1/"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "f5f78fcca821c7cb332e9734b496e3fc46af2fd5f506137e2147c05747730ff9"
-    sha256 cellar: :any_skip_relocation, high_sierra: "13c6ee3cfef95bbbe25489ef7f88f510d70ec2f6104cab07ac48a6e3267e0739"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d56ed2920fa3a4e18a9c995acf919ac3427f9202f1a9a43494f5b114883be379"
+    root_url "https://github.com/drud/ddev/releases/download/v1.17.6/"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "75f9b5c3bdee83e03c6e7e55b62d618ccb8d0dbcd57bc820f0ffacec5721cfc9"
+    sha256 cellar: :any_skip_relocation, high_sierra: "d317857fb62c3223a2e76c5516e994818ab92797a672410040bdcab10732b765"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "a5e8496b31055acf90be7ec817234d03a19ae58c3b27444cc726beff3af79896"
   end
   def install
     system "make", "VERSION=v#{version}", "COMMIT=v#{version}"
