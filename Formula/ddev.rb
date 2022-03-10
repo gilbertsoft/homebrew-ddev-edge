@@ -1,8 +1,8 @@
 class Ddev < Formula
   desc "Local web development system"
   homepage "https://ddev.readthedocs.io/"
-  url "https://github.com/drud/ddev/archive/v1.19.0-rc2.tar.gz"
-  sha256 "0db34da56ae16bb1a3d745fda30ad42b2a2abefd43237cfc75f61d67946dc8e4"
+  url "https://github.com/drud/ddev/archive/v1.19.0-rc3.tar.gz"
+  sha256 "38aabb460c3b9ed885c6078ea596543ce014be4af538d64c73fba7e43f6c1c2a"
   license "apache-2.0"
   head "https://github.com/drud/ddev.git", branch: "master"
 
@@ -12,10 +12,10 @@ class Ddev < Formula
   depends_on "make" => :build
 
   bottle do
-    root_url "https://github.com/drud/ddev/releases/download/v1.19.0-rc2/"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "58532ed73e055cb4ece7233712a3ce268eadb7dacf203ab778074ec8107b1f8c"
-    sha256 cellar: :any_skip_relocation, high_sierra: "b56380829041ac00934ff4968d68c747f2c952cd2c5feec5396fe1a488eff84e"
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "d7a105c6285a12b8b0df4280f4ea101ce5c459d29b4e8245cbc1570b162a4bf8"
+    root_url "https://github.com/drud/ddev/releases/download/v1.19.0-rc3/"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "b8b25c26399124ff7d65811775f9ffc373d9c07bed78b734ce96757e4d4a9cdd"
+    sha256 cellar: :any_skip_relocation, high_sierra: "b532cba2ce20deaac9c81e73efaa13fc55ac1e85b0bb333bb67560728ab40c21"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur: "925521feb698b1c96a978cd0abf948029b453341bcbbe8bd7ab46905ad3ab8e3"
   end
   def install
     system "make", "VERSION=v#{version}", "COMMIT=v#{version}"
