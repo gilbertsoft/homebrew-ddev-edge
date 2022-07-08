@@ -5,13 +5,13 @@
 class Ddev < Formula
   desc "DDEV"
   homepage "https://github.com/drud/ddev"
-  version "1.19.4-alpha2"
+  version "1.19.4-alpha3"
   license "Apache 2"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha2/ddev_macos-arm64.v1.19.4-alpha2.tar.gz"
-      sha256 "a796675f7bcd8429b68b50b6c64c9bc81a0db1e2f47275e8096a326ef9e4ad5e"
+    if Hardware::CPU.intel?
+      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha3/ddev_macos-amd64.v1.19.4-alpha3.tar.gz"
+      sha256 "02ad11fc75cb6a16c3535450358d0419475fa26e0599d2d20d506995c81574de"
 
       def install
         if build.head?
@@ -28,9 +28,9 @@ class Ddev < Formula
         end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha2/ddev_macos-amd64.v1.19.4-alpha2.tar.gz"
-      sha256 "86cae020c52d618c69cbfb3940274cba59f4f5d69080a240c28627a346484814"
+    if Hardware::CPU.arm?
+      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha3/ddev_macos-arm64.v1.19.4-alpha3.tar.gz"
+      sha256 "4da0a34492ea7e0a3c33240f08e3de7f7780a3422f849eff521bc0053ba828cd"
 
       def install
         if build.head?
@@ -51,8 +51,8 @@ class Ddev < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha2/ddev_linux-arm64.v1.19.4-alpha2.tar.gz"
-      sha256 "20deec3630f99524a262319fab54618e5fec85d002c5ed374e5c17a0fe44df64"
+      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha3/ddev_linux-arm64.v1.19.4-alpha3.tar.gz"
+      sha256 "7bbae4202014c57c8a03cc8239ad9aa7b2734bcd8f363230861856f15b7a6487"
 
       def install
         if build.head?
@@ -70,8 +70,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha2/ddev_linux-amd64.v1.19.4-alpha2.tar.gz"
-      sha256 "f6f3dacf5aafaf97a63a73558a7eae4ea521bd6709d14b1fce264a0bdf8fecc2"
+      url "https://github.com/drud/ddev/releases/download/v1.19.4-alpha3/ddev_linux-amd64.v1.19.4-alpha3.tar.gz"
+      sha256 "589d07338a921a1b5760dedadf6ad799e65777e2dec7654e9551dddf0eda6c1f"
 
       def install
         if build.head?
