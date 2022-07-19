@@ -5,13 +5,13 @@
 class Ddev < Formula
   desc "DDEV"
   homepage "https://github.com/drud/ddev"
-  version "1.19.5"
+  version "1.19.6-alpha.2"
   license "Apache 2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/drud/ddev/releases/download/v1.19.5/ddev_macos-arm64.v1.19.5.tar.gz"
-      sha256 "d58007631ba7eefcd22dd7f4ec242813439fecf40e9193294e25c55b506db938"
+      url "https://github.com/gilbertsoft/ddev/releases/download/v1.19.6-alpha.2/ddev_macos-arm64.v1.19.6-alpha.2.tar.gz"
+      sha256 "df0ed0b713001f96b2846c932bf862dd37641101e6a1a93368d99f28a9fe6f87"
 
       def install
         if build.head?
@@ -29,8 +29,8 @@ class Ddev < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/drud/ddev/releases/download/v1.19.5/ddev_macos-amd64.v1.19.5.tar.gz"
-      sha256 "ea00bd3e7cde3f84916238a1d7bf07992d0c3f526fe18065a2076b50c5ea08c7"
+      url "https://github.com/gilbertsoft/ddev/releases/download/v1.19.6-alpha.2/ddev_macos-amd64.v1.19.6-alpha.2.tar.gz"
+      sha256 "c722711985db0bdf442276fdc0c187ad49d579d2ef1d7e7df0d742f570b25afd"
 
       def install
         if build.head?
@@ -50,9 +50,9 @@ class Ddev < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/drud/ddev/releases/download/v1.19.5/ddev_linux-arm64.v1.19.5.tar.gz"
-      sha256 "fa2399e2031f1c7f3698e1eb71c3256c685c8dba61475dc574ccd79f12173a76"
+    if Hardware::CPU.intel?
+      url "https://github.com/gilbertsoft/ddev/releases/download/v1.19.6-alpha.2/ddev_linux-amd64.v1.19.6-alpha.2.tar.gz"
+      sha256 "42bcb092c1566e25c0a9b07303886b527b0eb5e923bfc13d87b774d1b06b2b88"
 
       def install
         if build.head?
@@ -69,9 +69,9 @@ class Ddev < Formula
         end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/drud/ddev/releases/download/v1.19.5/ddev_linux-amd64.v1.19.5.tar.gz"
-      sha256 "287547c7b2f7ae02c32a6bef23c2623cc12da061f67c2bb2434368f3faa5b2f5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/gilbertsoft/ddev/releases/download/v1.19.6-alpha.2/ddev_linux-arm64.v1.19.6-alpha.2.tar.gz"
+      sha256 "03289ae2984b0ec979d937d2b8e7b033f894781f9f9bb3faf66960ec970ce36c"
 
       def install
         if build.head?
